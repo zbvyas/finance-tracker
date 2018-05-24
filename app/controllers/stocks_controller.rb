@@ -1,6 +1,5 @@
 class StocksController < ApplicationController
   def search
-
     if params[:stock].blank?
         flash.now[:danger] = "You have entered an empty search!"
     else
@@ -11,6 +10,5 @@ class StocksController < ApplicationController
     respond_to do |format|
       format.js { render partial: 'users/result' }
     end
-
   end
 end
